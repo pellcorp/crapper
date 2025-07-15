@@ -55,7 +55,7 @@ class PrinterTemperatureMCU:
         return (temp - self.base_temperature) / self.slope
     def calc_base(self, temp, adc):
         return temp - adc * self.slope
-    def handle_mcu_identify(self):
+    def _mcu_identify(self):
         self._build_config()
 
     def _build_config(self):
